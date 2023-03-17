@@ -11,6 +11,12 @@
 		8AA029D429C288ED00584FB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029D329C288ED00584FB7 /* ContentView.swift */; };
 		8AA029D629C288EE00584FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA029D529C288EE00584FB7 /* Assets.xcassets */; };
 		8AA029D929C288EE00584FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA029D829C288EE00584FB7 /* Preview Assets.xcassets */; };
+		8AA029E029C28CF300584FB7 /* PulsingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029DF29C28CF300584FB7 /* PulsingButton.swift */; };
+		8AA029E229C3E04400584FB7 /* ScaleEffectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029E129C3E04400584FB7 /* ScaleEffectButton.swift */; };
+		8AA029E429C3E20A00584FB7 /* ButtonTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029E329C3E20A00584FB7 /* ButtonTransitionAnimation.swift */; };
+		8AA029E629C3E44600584FB7 /* CreditCardDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029E529C3E44600584FB7 /* CreditCardDrag.swift */; };
+		8AA029E829C3EEF000584FB7 /* SnakeHelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029E729C3EEF000584FB7 /* SnakeHelloWorld.swift */; };
+		8AA029EA29C3EFFA00584FB7 /* AsymetricAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA029E929C3EFFA00584FB7 /* AsymetricAnimatedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		8AA029D329C288ED00584FB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8AA029D529C288EE00584FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA029D829C288EE00584FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8AA029DF29C28CF300584FB7 /* PulsingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingButton.swift; sourceTree = "<group>"; };
+		8AA029E129C3E04400584FB7 /* ScaleEffectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectButton.swift; sourceTree = "<group>"; };
+		8AA029E329C3E20A00584FB7 /* ButtonTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTransitionAnimation.swift; sourceTree = "<group>"; };
+		8AA029E529C3E44600584FB7 /* CreditCardDrag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardDrag.swift; sourceTree = "<group>"; };
+		8AA029E729C3EEF000584FB7 /* SnakeHelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeHelloWorld.swift; sourceTree = "<group>"; };
+		8AA029E929C3EFFA00584FB7 /* AsymetricAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsymetricAnimatedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,12 @@
 				8AA029D329C288ED00584FB7 /* ContentView.swift */,
 				8AA029D529C288EE00584FB7 /* Assets.xcassets */,
 				8AA029D729C288EE00584FB7 /* Preview Content */,
+				8AA029DF29C28CF300584FB7 /* PulsingButton.swift */,
+				8AA029E129C3E04400584FB7 /* ScaleEffectButton.swift */,
+				8AA029E329C3E20A00584FB7 /* ButtonTransitionAnimation.swift */,
+				8AA029E529C3E44600584FB7 /* CreditCardDrag.swift */,
+				8AA029E729C3EEF000584FB7 /* SnakeHelloWorld.swift */,
+				8AA029E929C3EFFA00584FB7 /* AsymetricAnimatedView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -138,7 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA029D429C288ED00584FB7 /* ContentView.swift in Sources */,
+				8AA029E829C3EEF000584FB7 /* SnakeHelloWorld.swift in Sources */,
 				8AA029D229C288ED00584FB7 /* AnimationsApp.swift in Sources */,
+				8AA029E629C3E44600584FB7 /* CreditCardDrag.swift in Sources */,
+				8AA029E429C3E20A00584FB7 /* ButtonTransitionAnimation.swift in Sources */,
+				8AA029EA29C3EFFA00584FB7 /* AsymetricAnimatedView.swift in Sources */,
+				8AA029E029C28CF300584FB7 /* PulsingButton.swift in Sources */,
+				8AA029E229C3E04400584FB7 /* ScaleEffectButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
