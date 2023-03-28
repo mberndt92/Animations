@@ -35,25 +35,41 @@ extension AnyTransition {
 
 struct ContentView: View {
     
-    @State private var isShowingRed = false
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.blue)
-                .frame(width: 200, height: 200)
-            
-            if isShowingRed {
-                Rectangle()
-                    .fill(.red)
-                    .frame(width: 200, height: 200)
-                    .transition(.pivot)
+    enum AnimationSessions: String, CaseIterable {
+        case AsymetricAnimation
+        case ButtonTransitionAnimation
+        case Pulsing
+        case ScaleEffect
+        case SnakeHelloWorld
+        case ViewDragging
+        
+        @ViewBuilder
+        func view() -> some View {
+            switch self {
+            case .AsymetricAnimation: AsymetricAnimatedView()
+            case .ButtonTransitionAnimation: ButtonTransitionAnimationView()
+            case .Pulsing: PulsingButton()
+            case .ScaleEffect: ScaleEffectButton()
+            case .SnakeHelloWorld: SnakeHelloWorldView()
+            case .ViewDragging: CreditCardDrag()
             }
         }
-        .onTapGesture {
-            withAnimation {
-                isShowingRed.toggle()
+    }
+    
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(AnimationSessions.allCases, id: \.rawValue) { lesson in
+                    NavigationLink {
+                        lesson.view()
+                    } label: {
+                        Text(lesson.rawValue)
+                    }
+
+                }
+
             }
+            .navigationTitle("Animating in Swift UI")
         }
     }
 }

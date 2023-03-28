@@ -11,8 +11,7 @@ struct ScaleEffectButton: View {
     @State private var animationAmount = 1.0
     
     var body: some View {
-        print(animationAmount)
-        return VStack {
+        VStack {
             Stepper("Scale amount", value: $animationAmount.animation(
                 .easeOut(duration: 0.5)
                 .repeatCount(3, autoreverses: true)
@@ -30,6 +29,8 @@ struct ScaleEffectButton: View {
             .clipShape(Circle())
             .scaleEffect(animationAmount)
         }
+        .navigationTitle("Scale Effect Button")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -9,27 +9,41 @@ import SwiftUI
 
 struct PulsingButton: View {
     @State private var animationAmount = 1.0
+    @State private var isNavigationHidden = true
+    
+    private var simulatorOffset = 10
     
     var body: some View {
-        Button("Tap me") { }
-        .padding(50)
-        .background(.red)
-        .foregroundColor(.white)
-        .clipShape(Circle())
-        .overlay(
-            Circle()
-                .stroke(.red)
-                .scaleEffect(animationAmount)
-                .opacity(2 - animationAmount)
-                .animation(
-                    .easeInOut(duration: 1)
-                    .repeatForever(autoreverses: false),
-                           value: animationAmount)
-        )
-        .onAppear {
-            animationAmount = 2
+        GeometryReader { geometry in
+            Button("Toggle") {
+                withAnimation {
+                    isNavigationHidden.toggle()
+                }
+            }
+                .padding(50)
+                .background(.red)
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .overlay(
+                    Circle()
+                        .stroke(.red)
+                        .scaleEffect(animationAmount)
+                        .opacity(2 - animationAmount)
+                        .animation(
+                            .easeInOut(duration: 1)
+                            .repeatForever(autoreverses: false),
+                            value: animationAmount)
+                        .offset(y: simulatorOffset) // hack - somehow not centering otherwise
+                )
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .position(x: geometry.size.width / 2, y: geometry.size.height / 2 )
+                .onAppear {
+                    animationAmount = 2
+                }
+                .navigationTitle("Pulsing Button")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(isNavigationHidden)
         }
-        
     }
 }
 

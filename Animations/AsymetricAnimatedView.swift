@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AsymetricAnimatedView: View {
     @State private var isShowingRed = false
-    
+
     var body: some View {
         VStack {
             Button("Tap Me") {
@@ -17,7 +17,7 @@ struct AsymetricAnimatedView: View {
                     isShowingRed.toggle()
                 }
             }
-            
+
             if isShowingRed {
                 Rectangle()
                     .fill(.red)
@@ -26,6 +26,8 @@ struct AsymetricAnimatedView: View {
                     .transition(.asymmetric(insertion: .scale, removal: .opacity))
             }
         }
+        .navigationTitle("Asymetric Animated View")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
