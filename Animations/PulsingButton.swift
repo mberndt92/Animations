@@ -11,7 +11,7 @@ struct PulsingButton: View {
     @State private var animationAmount = 1.0
     @State private var isNavigationHidden = true
     
-    private var simulatorOffset = 10
+    private var simulatorOffset = 10.0
     
     var body: some View {
         GeometryReader { geometry in
